@@ -8,11 +8,11 @@ Below, please find information about the bioinformatic steps we have undertaken 
 We started with R1 and R2 fastq files outputted by a sequencing machine.
 Next, we used our custom scripts:
 
-## MultiSPLIT:
+## [MultiSPLIT](https://github.com/MikeCollasa/Swarming_project/blob/main/MultiSplit.py):
 - Splits reads of marker genes into separate subdirectories,
 - Passes only reads with tags expected for a given sample.
 
-## LSD (used for both COI and 16S data):
+## [LSD](https://github.com/MikeCollasa/Swarming_project/blob/main/LSD.py):
 - Analyses each library (sample) separately,
 - Merges R1 and R2 reads, passes only high-quality reads,
 - Converts fastq to fasta files,
@@ -20,7 +20,7 @@ Next, we used our custom scripts:
 - Assigns taxonomy affiliation to reads,
 - Produces zOTU/OTU tables used by other scripts.
 
-## Quack
+## [Quack](https://github.com/MikeCollasa/Swarming_project/blob/main/QUACK.py)
 Uses as an input:
 - 16S zOTU table (produced by LSD),
 - otus.tax (produced by LSD),
